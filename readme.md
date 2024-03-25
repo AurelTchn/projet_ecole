@@ -13,13 +13,13 @@ Assurez-vous que vous avez installé les logiciels suivants sur votre machine :
 
 2-	Configurations
 
-- Clonez ce dépôt sur votre machine en utilisant la commande suivante :  git clone https://github.com/votre_utilisateur/supercool.git
+- Clonez ce dépôt sur votre machine en utilisant la commande suivante :  git clone https://github.com/AurelTchn/projet_ecole.git
 - Décompressez le dossier zippé du projet et le placer sur le répertoire serveur(www ou htdocs) en fonction du serveur web dont vous disposez. 
-- Lancez votre serveur local puis créez une nouvelle base de donnée nommée ‘webschool’ pour y importer le fichier (LaravelProjet_Ecole_/webschool.sql) du projet cloné.
-- Ouvrir le dossier 'LaravelProjet_Ecole_/Projet_Ecole/programme' avec l'éditeur de code et un terminal dans ce dossier puis lancer la commande 'php artisan serve' pour lancer le projet sur votre serveur local.
+- Lancez votre serveur local puis créez une nouvelle base de donnée nommée ‘webschool’ pour y importer le fichier (webschool.sql) du projet cloné.
+- Ouvrir le dossier 'Projet_Ecole' avec l'éditeur de code et un terminal dans ce dossier puis lancer la commande 'php artisan serve' pour lancer le projet sur votre serveur local.
 - Lancez votre navigateur web et entrez le lien serveur(http://localhost:8000) que vous obtenez après avoir tapé la commande. Vous devriez alors accéder à la page d'accueil de la plateforme
 
 3- Tests
 
-Avant toute utilisation, veuillez consulter la documentation située à l'emplacement 'LaravelProjet_Ecole_/Documentation.docx'
+Avant toute utilisation, veuillez consulter la documentation située à l'emplacement 'Documentation.docx'
 
