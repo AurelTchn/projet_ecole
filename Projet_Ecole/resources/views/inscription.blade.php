@@ -343,7 +343,7 @@
 					@if ($errors)
 						@error('nom')
 								<ul>
-									<li style="color:red;font-size:20px">Le nom du parent est nécéssaire</li>
+									<li style="color:red;font-size:20px">{{$message}}</li>
 								</ul>
 						@enderror
 				
@@ -357,7 +357,7 @@
 					@if ($errors)
 						@error('prenom')
 								<ul>
-									<li style="color:red;font-size:20px">Le prenom du parent est nécéssaire</li>
+									<li style="color:red;font-size:20px">{{$message}}</li>
 								</ul>
 						@enderror
 				
@@ -370,7 +370,7 @@
 					@if ($errors)
 						@error('profession')
 								<ul>
-									<li style="color:red;font-size:20px">La profession du parent est nécéssaire</li>
+									<li style="color:red;font-size:20px">{{$message}}</li>
 								</ul>
 						@enderror
 				
@@ -382,29 +382,38 @@
 			<div class="row">
 				<div class="col-lg-4 ">
 					<label for="contact" style="font-size:20px; font-weight:bold;color:black "><b>Contact:</b></label>
-					<input style="font-size:20px" type="number" min="0" name="contact" id="contact" onblur="veri4(document.form1.contact.value);"   placeholder="Contact" class="form-control dd" value={{old('contact')}}>
+					<input style="font-size:20px" type="text" min="0" name="contact" id="contact" onblur="veri4(document.form1.contact.value);"   placeholder="Contact" class="form-control dd" value={{old('contact')}}>
 					<br>
-					@if ($errors)
+					{{-- @if ($errors)
 						@error('contact')
 								<ul>
 									<li style="color:red;font-size:20px">Le contact du parent est nécéssaire</li>
 								</ul>
 						@enderror
 				
+					@endif --}}
+					@if ($errors)
+
+						@error('contact')
+								<ul>
+									<li style="color:red; font-size:20px">{{$message}}</li>
+								</ul>
+						@enderror
+						
 					@endif
 				</div>
 
 				<div class="col-lg-4">
 					<label for="email" style="font-size:20px; font-weight:bold;color:black "><b>E-mail:</b> </label>
-					<input style="font-size:20px" type="email" name="email" id="email" onblur="veri5(document.form1.email.value);"  placeholder="Votre E-mail" class="form-control ee" value={{old('email')}}>
+					<input style="font-size:20px" type="text" name="email" id="email" onblur="veri5(document.form1.email.value);"  placeholder="Votre E-mail" class="form-control ee" value={{old('email')}}>
 					<br>
-					@if ($errors)
-						@error('email')
+					@if ($errors->has('email'))
+						@foreach ($errors->get('email') as $error)
 							<ul>
-								<li style="color:red;font-size:20px">Le nom de l'élève est nécéssaire</li>
+								<li style="color:red;font-size:20px">{{$error}}</li>
 							</ul>
-						@enderror
-				
+						@endforeach
+	
 					@endif
 				</div>
 				<div class="col-lg-4">
@@ -433,7 +442,7 @@
 					@if ($errors)
 						@error('nom_eleve')
 								<ul>
-									<li style="color:red;font-size:20px">Le nom de l'élève est nécéssaire</li>
+									<li style="color:red;font-size:20px">{{$message}}</li>
 								</ul>
 						@enderror
 				
@@ -446,7 +455,7 @@
 					@if ($errors)
 						@error('prenom_eleve')
 								<ul>
-									<li style="color:red;font-size:20px">Le prénom de l'élève est nécéssaire</li>
+									<li style="color:red;font-size:20px">{{$message}}</li>
 								</ul>
 						@enderror
 				
@@ -459,7 +468,7 @@
 					@if ($errors)
 						@error('date_de_naissance')
 								<ul>
-									<li style="color:red;font-size:20px">La date de naissance de l'élève est nécéssaire</li>
+									<li style="color:red;font-size:20px">{{$message}}</li>
 								</ul>
 						@enderror
 				
@@ -525,7 +534,7 @@
 					@if ($errors)
 						@error('personne_a_contacter')
 								<ul>
-									<li style="color:red;font-size:20px">Qui contactons-nous en cas d'urgence ?</li>
+									<li style="color:red;font-size:20px">{{$message}}</li>
 								</ul>
 						@enderror
 				
@@ -540,7 +549,7 @@
 					@if ($errors)
 						@error('adresse')
 								<ul>
-									<li style="color:red;font-size:20px">L'adresse de l'élève est nécéssaire</li>
+									<li style="color:red;font-size:20px">{{$message}}</li>
 								</ul>
 						@enderror
 				

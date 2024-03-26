@@ -25,7 +25,7 @@ class EleveRequest extends FormRequest
             'nom' => 'required',
             'prenom' => 'required',
             'profession' => 'required',
-            'contact' => 'required',
+            'contact' => 'required|numeric',
             'email' => 'required|email',
             'statut' => 'required',
             'nom_eleve' => 'required',
@@ -46,11 +46,13 @@ class EleveRequest extends FormRequest
             'prenom.required' => 'Le prenom du parent est nécéssaire',
             'profession.required' => 'La profession du parent est nécéssaire',
             'contact.required' => 'Le contact du parent est nécéssaire',
+            'contact.numeric' => 'Le contact doit être que des chiffres',
             'email.required' => 'L\'email du parent est nécéssaire',
+            'email.email' => 'L\'email entré n\'est pas valide',
             'nom_eleve.required' => 'Le nom de l\'élève est nécéssaire',
             'prenom_eleve.required' => 'Le prenom de l\'élève est nécéssaire',
             'date_de_naissance.required' => 'La date de naissance de l\'élève est nécéssaire',
-            'personne_a_contacter.required' => 'Qui contacterons-nous en cas d\'urgence',
+            'personne_a_contacter.required' => 'Qui contactons-nous en cas d\'urgence',
             'adresse.required' => 'L\'adresse de l\'élève est nécéssaire',
             
         ];
